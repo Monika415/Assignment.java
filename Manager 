@@ -1,0 +1,26 @@
+package employee;
+
+public class Employee {
+    public String name;
+    protected double salary;
+    private int empId;
+
+    public Employee(String name, double salary, int empId) {
+        this.name = name;
+        this.salary = salary;
+        this.empId = empId;
+    }
+
+    public void showEmployee() {
+        System.out.println("Name: " + name + " Salary: " + salary);
+    }
+}
+package manager;
+import employee.Employee;
+
+public class Manager {
+    public static void main(String[] args) {
+        Employee e = new Employee("Arun", 50000, 101);
+        e.showEmployee();
+    }
+}
