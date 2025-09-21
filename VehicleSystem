@@ -1,0 +1,42 @@
+import java.util.*;
+
+class Vehicle {
+    String brand;
+    int speed;
+
+    public void showDetails() {
+        System.out.println("Brand: " + brand + " Speed: " + speed);
+    }
+}
+
+class Car extends Vehicle {
+    int seats;
+    public void showCar() {
+        System.out.println("Car with " + seats + " seats");
+    }
+}
+
+class Bike extends Vehicle {
+    String type;
+    public void showBike() {
+        System.out.println("Bike type: " + type);
+    }
+}
+
+public class VehicleSystem {
+    public static void main(String[] args) {
+        Car c = new Car();
+        c.brand = "Toyota";
+        c.speed = 120;
+        c.seats = 4;
+        c.showDetails();
+        c.showCar();
+
+        Bike b = new Bike();
+        b.brand = "Honda";
+        b.speed = 80;
+        b.type = "Sports";
+        b.showDetails();
+        b.showBike();
+    }
+}
